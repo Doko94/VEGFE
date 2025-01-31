@@ -104,7 +104,7 @@ html {
     position: relative;
 }
 #sec-0 header:last-of-type h1{
-    font-size: 3rem;
+    font-size: 1.8rem;
     font-style: italic;
     font-weight: bold;
     color: var(--haccent);
@@ -115,7 +115,7 @@ html {
     color: var(--txtaccent);
 }
 #sec-0 header:last-of-type h1 p{
-    font-size: 3rem;
+    font-size: 1.2rem;
     font-style: normal;
     color: var(--textaccent2);
     margin: 0px;
@@ -1011,5 +1011,71 @@ text-shadow:1px 1px #73757E;
         width: 1340px;
     }
 }
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.contact-details {
+    flex: 1;
+    color: #fff;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ffcb0f;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #e5b309;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+#msg {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 
 /* END OF SHEET */

@@ -8,6 +8,14 @@
     <link href="css/animate.compat.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="Images/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="Images/android-chrome-512x512.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+
     <script defer src="js/scripts.js"></script>
     <title>Empresa de Construcción</title>
 </head>
@@ -30,7 +38,7 @@
                 <label for="menu"><i class="fas fa-bars"></i></label>
                 <input type="checkbox" id="menu">
                 <nav>
-                    <a href="#sec-0">Inicio</a>
+                    <!-- <a href="#sec-0">Inicio</a> -->
                     <a href="#sec-1">Nosotros</a>
                     <a href="#sec-2">Por qué elegirnos</a>
                     <a href="#sec-3">Servicios</a>
@@ -44,7 +52,7 @@
             <div class="container">
                 <h1>Somos Ingenieros Certificados</h1>
                 <h2>Servicios de Construcción<br>
-                    <span>Creativos y Profesionales</span>
+                    <span>y Gestión Informático</span>
                 </h2>
                 <p>Nos enfocamos en brindar soluciones de alta calidad para satisfacer todas sus necesidades de construcción, siempre a tiempo y con resultados excepcionales.</p>
                 <a href="#sec-1">Ver Más</a>
@@ -128,11 +136,11 @@
                 </div>
                 <div class="card border-0">
                     <div>
-                        <img src="Images/card3.jpg" class="card-img-top" alt="...">
-                        <h5 class="caption">Arquitectura</h5>
+                        <img src="Images/card33.jpg" class="card-img-top" alt="...">
+                        <h5 class="caption">Gestión Informática</h5>
                     </div>
                     <div class="card-body px-0 pt-4">
-                        <p>Diseños arquitectónicos personalizados y modernos.</p>
+                        <p>Consultoría, asesoramiento y gestión informática para pequeña y gran empresa.</p>
                         <a href="#sec-4">Ver Más</a>
                     </div>
                 </div>
@@ -171,18 +179,36 @@
     </section> -->
 
     <section id="sec-6">
-        <div class="container">
-            <h1>Contáctanos</h1>
-            <p>Si tienes alguna pregunta, no dudes en contactarnos a través de los siguientes medios:</p>
+        <div class="container contact-section">
             <div class="contact-details">
+                <h1>Contáctanos</h1>
+                <p>Si tienes alguna pregunta, no dudes en contactarnos a través de los siguientes medios:</p>
                 <p><strong>Dirección:</strong> 123 Calle Principal, Santiago, Chile</p>
-                <p><strong>Email:</strong> <a href="mailto:info@falsodominio.com">info@falsodominio.com</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@falsodominio.com" style="color: #ffcb0f;">info@falsodominio.com</a></p>
                 <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
                 <p><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
             </div>
+    
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+    
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+    
+                    <!-- <input type="submit" value="Enviar"> -->
+                    <input type="submit" value="Enviar" disabled style="cursor: not-allowed; background-color: #d3d3d3;">
+
+                </form>
+            </div>
         </div>
     </section>
-
+    
+    
     <section id="sec-7">
         <div class="container">
             <p>Copyright @2025 | Diseñado por <span>Equipo de Tecnologías Web</span></p>
@@ -204,5 +230,6 @@
     <script src="js/wow.min.js"></script>
     <script>new WOW().init();</script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
