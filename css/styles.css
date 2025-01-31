@@ -1017,6 +1017,7 @@ text-shadow:1px 1px #73757E;
     justify-content: space-between;
     gap: 30px;
     padding: 20px 0;
+    flex-direction: row-reverse;
 }
 
 .contact-details {
