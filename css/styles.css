@@ -1030,6 +1030,7 @@ text-shadow:1px 1px #73757E;
     padding: 20px;
     border-radius: 8px;
     color: #fff;
+    
 }
 
 .contact-form label {
@@ -1047,6 +1048,9 @@ text-shadow:1px 1px #73757E;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
+    max-width: 500px; /* Limita el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario */
+
 }
 
 .contact-form input::placeholder,
@@ -1061,6 +1065,7 @@ text-shadow:1px 1px #73757E;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .contact-form input[type="submit"]:hover {
