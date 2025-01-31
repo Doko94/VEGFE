@@ -1077,5 +1077,17 @@ text-shadow:1px 1px #73757E;
     margin-top: 5px;
 }
 
+.contact-details i {
+    color: var(--haccent); /* Color dorado */
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 
 /* END OF SHEET */
