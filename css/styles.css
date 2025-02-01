@@ -32,8 +32,8 @@ html {
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner3.jpg) no-repeat top center/cover;
-    /* padding: 6rem 2rem; 
-    min-height: 50vh;  */
+    background-position: top;
+    /* padding: 8rem 2rem; */
 }
 #sec-0 header.top {
     background-color: var(--haccent);
@@ -194,11 +194,11 @@ html {
 #sec-0 input:checked + nav {
     display: block;
 }
-#sec-0 article {
-    max-width: 700px; /* Reduce el ancho máximo del contenido */
-    margin: 0 auto;
+#sec-0 article{
+    display: flex;
+    align-items: center;
     text-align: center;
-    padding: 2rem 1rem; /* Reduce el padding interno */
+    padding: 4rem 2px;
 }
 #sec-0 article h1{
     font-weight: normal;
