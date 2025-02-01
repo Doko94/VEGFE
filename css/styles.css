@@ -32,8 +32,8 @@ html {
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner3.jpg) no-repeat top center/cover;
-    padding: 6rem 2rem; /* Reducido de 8rem a 6rem */
-    min-height: 50vh; /* Limita la altura mínima del banner */
+    /* padding: 6rem 2rem; 
+    min-height: 50vh;  */
 }
 #sec-0 header.top {
     background-color: var(--haccent);
