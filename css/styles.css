@@ -19,8 +19,8 @@ html {
     --txtaccent4: #000;
     --txtaccent5: #E5E5E5;
     --haccent: #de5f17;
-    --haccent_withOpacity: rgba(255, 203, 15,0.6);
-    --haccent2: #C79E23;
+    --haccent_withOpacity: rgba(170, 85, 0, 1);
+    --haccent2: #aa5500;
     --bgaccent: #1A1C27;
     --bgaccent_withOpacity: rgba(26, 28, 39,0.96);
 }
@@ -1072,7 +1072,7 @@ text-shadow:1px 1px #73757E;
 }
 
 .contact-form input[type="submit"]:hover {
-    background-color: #e5b309;
+    background-color: #aa5500;
 }
 
 .invalid {
