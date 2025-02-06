@@ -1118,25 +1118,28 @@ text-shadow:1px 1px #73757E;
     object-fit: cover;
 }
 
+.logo-wrapper {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    padding: 20px 0;
     justify-items: center;
 }
 
 .logo-item {
     text-align: center;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    padding: 15px;
-    transition: transform 0.3s ease-in-out;
 }
 
 .logo-item img {
-    max-width: 140px;
+    max-width: 150px;
     height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo-item p {
@@ -1145,7 +1148,7 @@ text-shadow:1px 1px #73757E;
     margin-top: 10px;
 }
 
-.logo-item:hover {
+.logo-item:hover img {
     transform: scale(1.1);
 }
 
