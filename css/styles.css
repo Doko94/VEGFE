@@ -1120,8 +1120,8 @@ text-shadow:1px 1px #73757E;
 
 .logo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     padding: 20px 0;
     justify-items: center;
 }
@@ -1130,12 +1130,12 @@ text-shadow:1px 1px #73757E;
     text-align: center;
     background-color: #f8f8f8;
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px;
     transition: transform 0.3s ease-in-out;
 }
 
 .logo-item img {
-    max-width: 100px;
+    max-width: 140px;
     height: auto;
 }
 
