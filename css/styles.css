@@ -1127,8 +1127,8 @@ text-shadow:1px 1px #73757E;
 
 .logo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
     justify-items: center;
 }
 
@@ -1137,7 +1137,7 @@ text-shadow:1px 1px #73757E;
 }
 
 .logo-item img {
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -1150,6 +1150,17 @@ text-shadow:1px 1px #73757E;
 
 .logo-item:hover img {
     transform: scale(1.1);
+}
+
+/* Media queries para optimizar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .logo-item img {
+        max-width: 90px;
+    }
+
+    .logo-grid {
+        gap: 15px;
+    }
 }
 
 
