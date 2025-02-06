@@ -1102,4 +1102,20 @@ text-shadow:1px 1px #73757E;
     height: auto; /* Mantiene la proporción del logo */
     display: block;
 }
+
+.card-body ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #484848;
+}
+
+.card-body ul li {
+    margin-bottom: 8px;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
 /* END OF SHEET */
