@@ -1118,4 +1118,36 @@ text-shadow:1px 1px #73757E;
     object-fit: cover;
 }
 
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    justify-items: center;
+}
+
+.logo-item {
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-item img {
+    max-width: 100px;
+    height: auto;
+}
+
+.logo-item p {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.logo-item:hover {
+    transform: scale(1.1);
+}
+
+
 /* END OF SHEET */
