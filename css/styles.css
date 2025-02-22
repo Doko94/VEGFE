@@ -1162,6 +1162,13 @@ text-shadow:1px 1px #73757E;
         gap: 15px;
     }
 }
+.section-title {
+    font-size: 36px; /* Ajusta según el tamaño real */
+    font-weight: bold;
+    text-align: center;
+    color: #000000; /* O el color que uses */
+    margin-bottom: 20px; /* Ajusta el espaciado si es necesario */
+}
 
 
 /* END OF SHEET */
