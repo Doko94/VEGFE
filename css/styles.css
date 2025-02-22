@@ -348,7 +348,7 @@ text-shadow:1px 1px #73757E;
 }
 #sec-3 h1{
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin-bottom: 30px;
     text-align: center;
     color: var(--bgaccent);
@@ -406,7 +406,7 @@ text-shadow:1px 1px #73757E;
 }
 #sec-4 h1{
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin-bottom: 1.6rem;
     color: var(--txtaccent);
     font-weight: 800;
@@ -461,7 +461,7 @@ text-shadow:1px 1px #73757E;
 }
 #sec-5 h1{
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin-bottom: 1.6rem;
     color: var(--txtaccent4);
     font-weight: 800;
@@ -597,7 +597,7 @@ text-shadow:1px 1px #73757E;
 }
 #sec-6 h1{
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 1.1rem;
 }
 #sec-6 .about h2{
