@@ -30,16 +30,84 @@ html {
     padding: 0px;
 }
 /* SECTION ZERO = LANDING VIEW */
+/* Ajustes para centrar el contenido y hacer #sec-0 completamente responsivo */
 #sec-0 {
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
-    min-height: 100vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
+    min-height: 100vh; /* Asegura que la sección ocupe el 100% de la pantalla */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    padding: 5vw; /* Ajuste dinámico para espacios internos */
 }
 
-#sec-0 h1, #sec-0 h2, #sec-0 p {
-    max-width: 80%;
-    margin: 0 auto;
-    color: var(--txtaccent);
+#sec-0 article {
+    max-width: 80%; /* Limita el ancho del contenido para evitar desbordes */
+    margin: auto;
 }
+
+#sec-0 article h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--txtaccent);
+    margin-bottom: 10px;
+}
+
+#sec-0 article h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--txtaccent);
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+#sec-0 article h2 span {
+    color: var(--haccent);
+}
+
+#sec-0 article p {
+    color: var(--txtaccent);
+    font-size: 1.2rem;
+    max-width: 60%; /* Mantiene el texto legible en pantallas grandes */
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+    #sec-0 article h1 {
+        font-size: 2rem;
+    }
+    
+    #sec-0 article h2 {
+        font-size: 2.5rem;
+    }
+    
+    #sec-0 article p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    #sec-0 {
+        padding: 10vw;
+    }
+    
+    #sec-0 article h1 {
+        font-size: 1.8rem;
+    }
+    
+    #sec-0 article h2 {
+        font-size: 2rem;
+    }
+    
+    #sec-0 article p {
+        font-size: 0.95rem;
+        max-width: 95%;
+    }
+}
+
 
 #sec-0 header.top {
     background-color: var(--haccent);
