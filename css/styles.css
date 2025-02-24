@@ -33,10 +33,6 @@ html {
 #sec-0 {
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
     min-height: 100vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
 #sec-0 header.top {
