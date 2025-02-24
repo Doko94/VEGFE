@@ -30,11 +30,34 @@ html {
     padding: 0px;
 }
 /* SECTION ZERO = LANDING VIEW */
-#sec-0{
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat top center/cover;
-    /* background-position: top; */
-    /* padding: 8rem 2rem; */
+#sec-0 {
+    height: 100vh; /* Hace que la sección ocupe toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), 
+    url(../Images/banner33.jpg) no-repeat center center/cover;
+    background-size: cover;
+    padding: 8rem 2rem; /* Ajusta el padding según necesidad */
 }
+
+#sec-0 article {
+    max-width: 80%; /* Limita el ancho del contenido */
+    margin: auto;
+}
+
+#sec-0 article h2 {
+    font-size: 3.5rem; /* Aumenta el tamaño del título */
+    font-weight: bold;
+}
+
+#sec-0 article p {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    max-width: 900px;
+    margin: auto;
+}
+
 #sec-0 header.top {
     background-color: var(--haccent);
     font-size: 0.85rem;
