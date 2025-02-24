@@ -35,6 +35,12 @@ html {
     min-height: 100vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
 }
 
+#sec-0 h1, #sec-0 h2, #sec-0 p {
+    max-width: 80%;
+    margin: 0 auto;
+    color: var(--txtaccent);
+}
+
 #sec-0 header.top {
     background-color: var(--haccent);
     font-size: 0.85rem;
