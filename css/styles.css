@@ -30,20 +30,92 @@ html {
     padding: 0px;
 }
 /* SECTION ZERO = LANDING VIEW */
+/* Ajuste del banner para que ocupe todo el ancho */
 #sec-0 {
-    height: 100vh; /* Ajusta la altura a la pantalla completa */
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0; /* Aumenta el padding superior e inferior */
+    padding: 8rem 2rem;
 }
 
-#sec-0 article .container {
-    max-width: 80%; /* Ajusta el ancho del contenido */
-    margin: auto;
+#sec-0 article {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#sec-0 article h2 {
+    font-size: 3rem;
+    color: var(--txtaccent);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#sec-0 article p {
+    font-size: 1.2rem;
+    color: var(--txtaccent);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ajuste del logo y menú en el header para evitar desalineaciones */
+#sec-0 header:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bgaccent);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sec-0 header .logo {
+    width: 200px;
+    height: auto;
+}
+
+#sec-0 header nav {
+    display: flex;
+    gap: 15px;
+}
+
+#sec-0 header nav a {
+    color: var(--txtaccent);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+#sec-0 header nav a:hover {
+    color: var(--haccent);
+}
+
+/* Ajuste del responsive para móviles */
+@media (max-width: 768px) {
+    #sec-0 {
+        height: auto;
+        padding: 6rem 1rem;
+    }
+    
+    #sec-0 article h2 {
+        font-size: 2rem;
+    }
+
+    #sec-0 article p {
+        font-size: 1rem;
+    }
+
+    #sec-0 header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 #sec-0 header.top {
