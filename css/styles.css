@@ -31,31 +31,60 @@ html {
 }
 /* SECTION ZERO = LANDING VIEW */
 #sec-0 {
-    height: 100vh; /* Hace que la sección ocupe toda la pantalla */
+    height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), 
-    url(../Images/banner33.jpg) no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url(../Images/banner33.jpg) no-repeat center center/cover;
     background-size: cover;
-    padding: 8rem 2rem; /* Ajusta el padding según necesidad */
+    padding: 4rem 2rem; /* Ajuste del padding para centrar mejor */
+}
+
+#sec-0 .container {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo */
+    margin: auto;
+    padding: 0 2rem;
 }
 
 #sec-0 article {
-    max-width: 80%; /* Limita el ancho del contenido */
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
 }
 
 #sec-0 article h2 {
-    font-size: 3.5rem; /* Aumenta el tamaño del título */
+    font-size: 3rem; /* Ajuste del tamaño del título */
     font-weight: bold;
+    color: white;
+}
+
+#sec-0 article h2 span {
+    color: #de5f17; /* Mantiene el color destacado */
 }
 
 #sec-0 article p {
-    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    font-size: 1.5rem;
+    color: white;
     max-width: 900px;
-    margin: auto;
+    margin: 20px auto; /* Centra el párrafo */
+}
+
+@media (max-width: 768px) {
+    #sec-0 {
+        height: auto;
+        padding: 5rem 2rem;
+    }
+
+    #sec-0 article h2 {
+        font-size: 2rem;
+    }
+
+    #sec-0 article p {
+        font-size: 1.2rem;
+    }
 }
 
 #sec-0 header.top {
