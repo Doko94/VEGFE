@@ -30,61 +30,48 @@ html {
     padding: 0px;
 }
 /* SECTION ZERO = LANDING VIEW */
-#sec-0 {
-    height: 100vh; /* Asegura que la sección ocupe toda la pantalla */
+#sec-0 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bgaccent); /* Mantiene el fondo oscuro */
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sec-0 header .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                url(../Images/banner33.jpg) no-repeat center center/cover;
-    background-size: cover;
-    padding: 4rem 2rem; /* Ajuste del padding para centrar mejor */
-}
-
-#sec-0 .container {
-    width: 100%;
-    max-width: 1200px; /* Ajusta el ancho máximo */
-    margin: auto;
-    padding: 0 2rem;
-}
-
-#sec-0 article {
-    width: 100%;
-    max-width: 1000px;
+    width: 95%;
+    max-width: 1200px;
     margin: auto;
 }
 
-#sec-0 article h2 {
-    font-size: 3rem; /* Ajuste del tamaño del título */
+#sec-0 .logo {
+    width: 180px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+#sec-0 header nav {
+    display: flex;
+    gap: 15px;
+}
+
+#sec-0 header nav a {
+    text-decoration: none;
+    color: var(--txtaccent1);
     font-weight: bold;
-    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
 }
 
-#sec-0 article h2 span {
-    color: #de5f17; /* Mantiene el color destacado */
-}
-
-#sec-0 article p {
-    font-size: 1.5rem;
-    color: white;
-    max-width: 900px;
-    margin: 20px auto; /* Centra el párrafo */
-}
-
-@media (max-width: 768px) {
-    #sec-0 {
-        height: auto;
-        padding: 5rem 2rem;
-    }
-
-    #sec-0 article h2 {
-        font-size: 2rem;
-    }
-
-    #sec-0 article p {
-        font-size: 1.2rem;
-    }
+#sec-0 header nav a:hover {
+    color: var(--txtaccent);
+    background-color: var(--haccent_withOpacity);
+    border-radius: 5px;
 }
 
 #sec-0 header.top {
