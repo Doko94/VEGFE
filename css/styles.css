@@ -30,91 +30,93 @@ html {
     padding: 0px;
 }
 /* SECTION ZERO = LANDING VIEW */
-/* Ajuste del banner para que ocupe todo el ancho */
+/* CSS General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Estilos para el banner */
 #sec-0 {
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta la altura del banner */
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../Images/banner33.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#sec-0 header.top {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1A1C27;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#sec-0 header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+#sec-0 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 8rem 2rem;
 }
 
-#sec-0 article {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-#sec-0 article h2 {
+#sec-0 h2 {
     font-size: 3rem;
-    color: var(--txtaccent);
     font-weight: bold;
     text-transform: uppercase;
 }
 
-#sec-0 article p {
+#sec-0 h2 span {
+    color: #de5f17;
+}
+
+#sec-0 p {
     font-size: 1.2rem;
-    color: var(--txtaccent);
     max-width: 800px;
-    margin: 0 auto;
 }
 
-/* Ajuste del logo y menú en el header para evitar desalineaciones */
-#sec-0 header:last-of-type {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--bgaccent);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#sec-0 header .logo {
-    width: 200px;
-    height: auto;
-}
-
-#sec-0 header nav {
-    display: flex;
-    gap: 15px;
-}
-
-#sec-0 header nav a {
-    color: var(--txtaccent);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-#sec-0 header nav a:hover {
-    color: var(--haccent);
-}
-
-/* Ajuste del responsive para móviles */
 @media (max-width: 768px) {
     #sec-0 {
-        height: auto;
-        padding: 6rem 1rem;
+        height: 70vh;
     }
     
-    #sec-0 article h2 {
+    #sec-0 h2 {
         font-size: 2rem;
     }
 
-    #sec-0 article p {
+    #sec-0 p {
         font-size: 1rem;
-    }
-
-    #sec-0 header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 0 20px;
     }
 }
 
