@@ -30,58 +30,13 @@ html {
     padding: 0px;
 }
 /* SECTION ZERO = LANDING VIEW */
-/* Ajuste de la sección #sec-0 para que el fondo se adapte a la pantalla */
 #sec-0 {
-    width: 100vw; /* Ocupa todo el ancho */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
+    min-height: 100vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-                url(../Images/banner33.jpg) no-repeat center center/cover;
-    background-size: cover;
-    padding: 4rem 2rem;
-}
-
-#sec-0 article {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem 0;
-}
-
-#sec-0 article h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-}
-
-#sec-0 article h2 span {
-    color: #de5f17;
-}
-
-#sec-0 article p {
-    font-size: 1.6rem;
-    color: white;
-    max-width: 850px;
-    margin: 20px auto;
-}
-
-/* Ajuste responsivo para dispositivos móviles */
-@media (max-width: 768px) {
-    #sec-0 {
-        height: auto; /* Ajusta la altura automáticamente en móviles */
-        padding: 6rem 1rem;
-    }
-
-    #sec-0 article h2 {
-        font-size: 2.5rem;
-    }
-
-    #sec-0 article p {
-        font-size: 1.2rem;
-    }
+    justify-content: center;
+    width: 100%;
 }
 
 #sec-0 header.top {
