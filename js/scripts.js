@@ -1,87 +1,90 @@
-//function to validate user email address
-function criteria() { 
-    const form = document.getElementById('form');
-    const validChars = ['.', '@', '_','-'];
-    let email = document.getElementById('email').value;    
-    let msg = document.getElementById('msg');
-    let firstAt = email.indexOf('@');
-    let lastAt = email.lastIndexOf('@');
-    let lastDot = email.lastIndexOf('.');
-    let firstChar = email.charAt(0);
-    
-    let state = true;
-    
-    email = email.trim().toLowerCase();
-    msg.innerHTML = '';
+document.addEventListener("DOMContentLoaded", function() {
+    // 🔹 Verifica si existe un formulario antes de usarlo
+    let form = document.querySelector("form");
 
-    if(firstChar=='@' || firstChar=='.' ||firstChar=='_' || firstChar=='-' ||  !isNaN(firstChar)){
-        msg.innerHTML = "invalid fisrt character for Email address";
-        state = false;
-    }
-    else if(email.length<8){
-        msg.innerHTML = "your email is too short!";
-        state = false;
-    }
-    else if((firstAt<2) || (firstAt!=lastAt)){
-        msg.innerHTML = "Error in @";
-        state = false;
-    }
-    else if(lastDot-lastAt<3){
-        msg.innerHTML = "Error in domain name";
-        state = false;
-    }
-    else if(email.length-lastDot<3){
-        msg.innerHTML = "Error in .com";
-        state = false;
-    }
-    else {
-        for(var i=0; i<email.length && state == true; i++){
-       
-            if((email.charCodeAt(i)>=97 && email.charCodeAt(i)<=122)){
-                continue;
-            }
-            else if ((email.charCodeAt(i)>=48 && email.charCodeAt(i)<=57)) {
-                continue;
-            }
-            else if (validChars.indexOf(email.charAt(i))!=-1){
-                continue;
-            }
-            else {
-                msg.innerHTML = "Please use valid email characters";
-                state = false;
-            }
-         }
+    if (form) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            console.log("Formulario enviado correctamente.");
+        });
+    } else {
+        console.warn("⚠️ No hay formulario en la página. Código de formulario omitido.");
     }
 
-    if (state == true) {
-        msg.innerHTML = 'Thank You :) Your Message has been submitted successfully. <br> You shall here form us very soon!';
-        document.getElementById('email').classList.remove("invalid")
-    }
-    else {
-        document.getElementById('email').classList.add("invalid")
-    }   
-}    
+    // 🔹 Manejo de la barra de búsqueda
+    const search = document.getElementById('search');
+    const searchBar = document.getElementById('searchBar');
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    criteria();
+    if (search && searchBar) {
+        search.addEventListener('click', function () {
+            searchBar.classList.toggle('show');
+            searchBar.classList.toggle('hide');
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && searchBar.classList.contains('show')) {
+                searchBar.classList.toggle('show');
+                searchBar.classList.toggle('hide');
+            }
+        });
+    } else {
+        console.warn("⚠️ Elementos de búsqueda no encontrados. Código de búsqueda omitido.");
+    }
+
+    // 🔹 Función de validación de email (Solo si existe el campo)
+    const emailField = document.getElementById('email');
+    const msgField = document.getElementById('msg');
+
+    function criteria() { 
+        if (!emailField || !msgField) {
+            console.warn("⚠️ Campo de email no encontrado. Función 'criteria' omitida.");
+            return;
+        }
+
+        const validChars = ['.', '@', '_', '-'];
+        let email = emailField.value.trim().toLowerCase();
+        let firstAt = email.indexOf('@');
+        let lastAt = email.lastIndexOf('@');
+        let lastDot = email.lastIndexOf('.');
+        let firstChar = email.charAt(0);
+        let state = true;
+
+        msgField.innerHTML = '';
+
+        if (firstChar == '@' || firstChar == '.' || firstChar == '_' || firstChar == '-' || !isNaN(firstChar)) {
+            msgField.innerHTML = "❌ Email no puede comenzar con un carácter especial o número.";
+            state = false;
+        } else if (email.length < 8) {
+            msgField.innerHTML = "❌ El email es demasiado corto.";
+            state = false;
+        } else if ((firstAt < 2) || (firstAt !== lastAt)) {
+            msgField.innerHTML = "❌ Error en el uso del '@'.";
+            state = false;
+        } else if (lastDot - lastAt < 3) {
+            msgField.innerHTML = "❌ Error en el dominio del email.";
+            state = false;
+        } else if (email.length - lastDot < 3) {
+            msgField.innerHTML = "❌ Error en la extensión del email.";
+            state = false;
+        } else {
+            for (let i = 0; i < email.length && state; i++) {
+                let charCode = email.charCodeAt(i);
+                if ((charCode >= 97 && charCode <= 122) || (charCode >= 48 && charCode <= 57) || validChars.includes(email[i])) {
+                    continue;
+                } else {
+                    msgField.innerHTML = "❌ Usa caracteres válidos en el email.";
+                    state = false;
+                    break;
+                }
+            }
+        }
+
+        if (state) {
+            msgField.innerHTML = "✅ Email válido. Gracias por tu mensaje.";
+            emailField.classList.remove("invalid");
+        } else {
+            emailField.classList.add("invalid");
+        }
+    }
 });
-
-//SEARCH
-const search = document.getElementById('search');
-const searchBar = document.getElementById('searchBar');
-//click on the Magnifier icon to toggle the search bar
-search.addEventListener('click', function (){
-    searchBar.classList.toggle('show')
-    searchBar.classList.toggle('hide')
-})
-//press escape to close the search bar
- document.addEventListener('keydown', (event) => {
-     var keyName = event.key;
-     console.log("keyName");
-     if ((keyName == 'Escape' && searchBar.classList.contains('show') == true)) {
-            searchBar.classList.toggle('show')
-            searchBar.classList.toggle('hide')    
-         }
- } )
 
