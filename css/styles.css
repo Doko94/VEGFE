@@ -1171,30 +1171,46 @@ text-shadow:1px 1px #73757E;
     margin-bottom: 20px; /* Ajusta el espaciado si es necesario */
 }
 
+/* ===============================
+   Animación sutil logos clientes
+   (se activa al entrar a #sec-4)
+   =============================== */
+
 @keyframes fadeUpSoft {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-.logo-item {
-    opacity: 0; /* estado inicial */
+/* Estado inicial (antes de entrar a la vista) */
+#sec-4 .logo-item {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+/* Se activa cuando JS agrega .is-visible */
+#sec-4 .logo-item.is-visible {
     animation: fadeUpSoft 0.8s ease forwards;
 }
 
-/* Delay progresivo para efecto elegante */
-.logo-item:nth-child(1) { animation-delay: 0.1s; }
-.logo-item:nth-child(2) { animation-delay: 0.2s; }
-.logo-item:nth-child(3) { animation-delay: 0.3s; }
-.logo-item:nth-child(4) { animation-delay: 0.4s; }
-.logo-item:nth-child(5) { animation-delay: 0.5s; }
-.logo-item:nth-child(6) { animation-delay: 0.6s; }
-.logo-item:nth-child(7) { animation-delay: 0.7s; }
-.logo-item:nth-child(8) { animation-delay: 0.8s; }
+/* Delay progresivo (cuando ya están visibles) */
+#sec-4 .logo-item.is-visible:nth-child(1) { animation-delay: 0.10s; }
+#sec-4 .logo-item.is-visible:nth-child(2) { animation-delay: 0.20s; }
+#sec-4 .logo-item.is-visible:nth-child(3) { animation-delay: 0.30s; }
+#sec-4 .logo-item.is-visible:nth-child(4) { animation-delay: 0.40s; }
+#sec-4 .logo-item.is-visible:nth-child(5) { animation-delay: 0.50s; }
+#sec-4 .logo-item.is-visible:nth-child(6) { animation-delay: 0.60s; }
+#sec-4 .logo-item.is-visible:nth-child(7) { animation-delay: 0.70s; }
+#sec-4 .logo-item.is-visible:nth-child(8) { animation-delay: 0.80s; }
+
+/* Accesibilidad: si el usuario prefiere menos animación */
+@media (prefers-reduced-motion: reduce) {
+    #sec-4 .logo-item,
+    #sec-4 .logo-item.is-visible {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}
+
 
 /* END OF SHEET */
