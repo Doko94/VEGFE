@@ -1171,5 +1171,30 @@ text-shadow:1px 1px #73757E;
     margin-bottom: 20px; /* Ajusta el espaciado si es necesario */
 }
 
+@keyframes fadeUpSoft {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-item {
+    opacity: 0; /* estado inicial */
+    animation: fadeUpSoft 0.8s ease forwards;
+}
+
+/* Delay progresivo para efecto elegante */
+.logo-item:nth-child(1) { animation-delay: 0.1s; }
+.logo-item:nth-child(2) { animation-delay: 0.2s; }
+.logo-item:nth-child(3) { animation-delay: 0.3s; }
+.logo-item:nth-child(4) { animation-delay: 0.4s; }
+.logo-item:nth-child(5) { animation-delay: 0.5s; }
+.logo-item:nth-child(6) { animation-delay: 0.6s; }
+.logo-item:nth-child(7) { animation-delay: 0.7s; }
+.logo-item:nth-child(8) { animation-delay: 0.8s; }
 
 /* END OF SHEET */
