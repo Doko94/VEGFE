@@ -32,6 +32,11 @@ html {
 /* SECTION ZERO = LANDING VIEW */
 #sec-0 {
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-radius: 0 0 80px 80px;
+
+    overflow: hidden; /* CLAVE para que el background respete el radio */
     min-height: 95vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
 }
 
@@ -1367,6 +1372,14 @@ text-shadow:1px 1px #73757E;
     padding: 5px 9px;
   }
 }
+
+@media (max-width: 767px) {
+  #sec-0 {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+}
+
 
 
 /* END OF SHEET */
