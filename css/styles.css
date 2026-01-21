@@ -1120,37 +1120,64 @@ text-shadow:1px 1px #73757E;
 }
 
 .logo-wrapper {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.98);
+    padding: 34px 26px;
+    border-radius: 14px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
 }
 
 .logo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* mobile */
+    gap: 26px 30px;
+    align-items: center;
 }
 
 .logo-item {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110px;               /* altura uniforme */
+    padding: 10px 12px;
+    border-radius: 12px;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    opacity: 0;                  /* (para animación de entrada) */
+    transform: translateY(18px); /* (para animación de entrada) */
 }
 
 .logo-item img {
-    max-width: 120px;
+    max-height: 56px;
+    max-width: 160px;
+    width: auto;
     height: auto;
-    transition: transform 0.3s ease-in-out;
+    object-fit: contain;
+
+    /* Blanco y negro + look premium */
+    filter: grayscale(100%);
+    opacity: 0.85;
+
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
 .logo-item p {
-    font-weight: bold;
-    color: #333;
     margin-top: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    color: #3a3a3a;
+    opacity: 0.75;
+}
+
+.logo-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    transform: translateY(-2px);
 }
 
 .logo-item:hover img {
-    transform: scale(1.1);
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.04);
 }
 
 /* Media queries para optimizar en pantallas pequeñas */
@@ -1192,23 +1219,54 @@ text-shadow:1px 1px #73757E;
     animation: fadeUpSoft 0.8s ease forwards;
 }
 
-/* Delay progresivo (cuando ya están visibles) */
-#sec-4 .logo-item.is-visible:nth-child(1) { animation-delay: 0.10s; }
-#sec-4 .logo-item.is-visible:nth-child(2) { animation-delay: 0.20s; }
-#sec-4 .logo-item.is-visible:nth-child(3) { animation-delay: 0.30s; }
-#sec-4 .logo-item.is-visible:nth-child(4) { animation-delay: 0.40s; }
-#sec-4 .logo-item.is-visible:nth-child(5) { animation-delay: 0.50s; }
-#sec-4 .logo-item.is-visible:nth-child(6) { animation-delay: 0.60s; }
-#sec-4 .logo-item.is-visible:nth-child(7) { animation-delay: 0.70s; }
-#sec-4 .logo-item.is-visible:nth-child(8) { animation-delay: 0.80s; }
+/* Delay progresivo (si tienes más logos, puedes duplicar estas líneas) */
+#sec-4 .logo-item.is-visible:nth-child(1)  { animation-delay: 0.08s; }
+#sec-4 .logo-item.is-visible:nth-child(2)  { animation-delay: 0.14s; }
+#sec-4 .logo-item.is-visible:nth-child(3)  { animation-delay: 0.20s; }
+#sec-4 .logo-item.is-visible:nth-child(4)  { animation-delay: 0.26s; }
+#sec-4 .logo-item.is-visible:nth-child(5)  { animation-delay: 0.32s; }
+#sec-4 .logo-item.is-visible:nth-child(6)  { animation-delay: 0.38s; }
+#sec-4 .logo-item.is-visible:nth-child(7)  { animation-delay: 0.44s; }
+#sec-4 .logo-item.is-visible:nth-child(8)  { animation-delay: 0.50s; }
+#sec-4 .logo-item.is-visible:nth-child(9)  { animation-delay: 0.56s; }
+#sec-4 .logo-item.is-visible:nth-child(10) { animation-delay: 0.62s; }
+#sec-4 .logo-item.is-visible:nth-child(11) { animation-delay: 0.68s; }
+#sec-4 .logo-item.is-visible:nth-child(12) { animation-delay: 0.74s; }
+#sec-4 .logo-item.is-visible:nth-child(13) { animation-delay: 0.80s; }
+#sec-4 .logo-item.is-visible:nth-child(14) { animation-delay: 0.86s; }
+#sec-4 .logo-item.is-visible:nth-child(15) { animation-delay: 0.92s; }
+#sec-4 .logo-item.is-visible:nth-child(16) { animation-delay: 0.98s; }
+#sec-4 .logo-item.is-visible:nth-child(17) { animation-delay: 1.04s; }
+#sec-4 .logo-item.is-visible:nth-child(18) { animation-delay: 1.10s; }
+#sec-4 .logo-item.is-visible:nth-child(19) { animation-delay: 1.16s; }
+#sec-4 .logo-item.is-visible:nth-child(20) { animation-delay: 1.22s; }
 
-/* Accesibilidad: si el usuario prefiere menos animación */
+/* ===== Breakpoints: columnas más “corporativas” ===== */
+@media (min-width: 768px) {
+    .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .logo-item { height: 120px; }
+    .logo-item img { max-height: 60px; max-width: 180px; }
+}
+
+@media (min-width: 1200px) {
+    .logo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1400px) {
+    .logo-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+/* Accesibilidad: reduce animación si el usuario lo pide */
 @media (prefers-reduced-motion: reduce) {
     #sec-4 .logo-item,
     #sec-4 .logo-item.is-visible {
         opacity: 1;
         transform: none;
         animation: none;
+    }
+    .logo-item,
+    .logo-item img {
+        transition: none;
     }
 }
 
