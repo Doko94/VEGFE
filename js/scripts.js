@@ -44,6 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
           // Activa animación en cascada
           logoItems.forEach((el) => el.classList.add("is-visible"));
 
+          // ✅ BONUS: Hint sutil de scroll horizontal (solo una vez)
+          const track = document.querySelector("#sec-4 .logo-track");
+          if (track) {
+            track.scrollLeft = 0;
+            setTimeout(() => { track.scrollLeft = 50; }, 250);
+            setTimeout(() => { track.scrollLeft = 0; }, 650);
+          }
+
           // Solo una vez (evita re-animar al subir/bajar)
           observer.disconnect();
         });
@@ -53,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(clientesSection);
   } else {
-    console.warn("⚠️ Sección #sec-4 o .logo-item no encontrados. Animación de logos omitida.");
+    console.warn(
+      "⚠️ Sección #sec-4 o .logo-item no encontrados. Animación de logos omitida."
+    );
   }
 });
 
@@ -84,7 +94,8 @@ function criteria() {
     firstChar == "-" ||
     !isNaN(firstChar)
   ) {
-    msgField.innerHTML = "❌ Email no puede comenzar con un carácter especial o número.";
+    msgField.innerHTML =
+      "❌ Email no puede comenzar con un carácter especial o número.";
     state = false;
   } else if (email.length < 8) {
     msgField.innerHTML = "❌ El email es demasiado corto.";

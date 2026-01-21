@@ -1124,6 +1124,28 @@ text-shadow:1px 1px #73757E;
     padding: 34px 26px;
     border-radius: 14px;
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+    position: relative;
+}
+
+.logo-wrapper::before,
+.logo-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 46px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.logo-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.98), rgba(255,255,255,0));
+}
+
+.logo-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0.98), rgba(255,255,255,0));
 }
 
 .logo-track {
@@ -1199,12 +1221,30 @@ text-shadow:1px 1px #73757E;
 
 /* Media queries para optimizar en pantallas pequeñas */
 @media (max-width: 768px) {
+
+  .logo-track::-webkit-scrollbar { height: 10px; }
+  .logo-track::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.22);
+    border-radius: 999px;
+  }
+
     .logo-item img {
         max-width: 90px;
+        max-height: 48px;
+    }
+
+    .logo-item {
+        width: 30vw;      /* ~3 en pantalla (30*3=90 + gaps) */
+        min-width: 110px; /* piso para que no queden enanos */
+        height: 95px;
+    }
+
+    .logo-track {
+        padding: 8px 6px 14px;
     }
 
     .logo-grid {
-        gap: 15px;
+        gap: 12px;
     }
 }
 .section-title {
