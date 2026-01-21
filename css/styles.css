@@ -32,7 +32,7 @@ html {
 /* SECTION ZERO = LANDING VIEW */
 #sec-0 {
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner33.jpg) no-repeat center center/cover;
-    min-height: 85vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
+    min-height: 95vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
 }
 
 #sec-0 header.top {
