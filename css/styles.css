@@ -37,7 +37,7 @@ html {
     border-radius: 0 0 100px 100px;
 
     overflow: hidden; /* CLAVE para que el background respete el radio */
-    min-height: 95vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
+    min-height: 100vh; /* Se asegura de que ocupe el 100% de la altura de la pantalla */
 }
 
 #sec-0 header.top {
